@@ -13,7 +13,9 @@ if (outOfStock === true) {
 // QUESTION 2 //
 
 for (var i = 15; i <= 25; i++ ) {
-    if (i === 17); {
+    var equal = 17;
+    var equal2 = 20;
+    if (i === equal && i === equal2); {
         console.log(i);
     }
 }
@@ -50,7 +52,7 @@ var gamesContainer = document.querySelector("ul");
 for (var i = 0; i <games.length; i++) {
     var rating = games[i].rating;
     var gamesRating = games[i].title + ": " + games[i].rating;
-    if (rating <= 3.5) {
+    if (rating < 3.5) {
         gamesContainer.innerHTML += "<li>" + gamesRating + "</li";
     }
 }
@@ -96,27 +98,25 @@ element.innerHTML = sum;
 
 
 
-
 // QUESTION 6 // 
 
 var heading = document.querySelector("h1");
 var buttonPage = document.querySelector(".page");
 var remove = document.querySelector("ul");
 var body = document.querySelector("body");
+var title = document.querySelector("title")
 
 function changeHeading() {
-    heading.innerHTML = "Updated heading";
+    title.innerHTML = "Updated title";
 
-    
     body.style.backgroundColor = "yellow";
 
     heading.style.color = "green";
 
     heading.style.fontFamily = "impact";
 
-    heading.innerHTML = heading.innerHTML + "<h1>" + "<a href='#'>" + "Programming Foundation Course Assignment" + "<a>" + "<h1>";
+    heading.innerHTML = "<a href='#'>" + heading.innerHTML + "<a>";
 
-    
     remove.style.padding = "none";
     remove.style.listStyleType = "none";
 }
@@ -145,21 +145,23 @@ var toys = [
 	},
 ];
 
-console.log(toys);
 
 var toyList = document.querySelector('#total');
 var priceButton = document.querySelector(".price");
 
 function buttonClick() {
+    
     for (var i = 0; i < toys.length; i++) {
 
         var item = toys[i];
+        var itemPrice = toys[i].price;
+        
+        //console.log(item.name);
     
-        console.log(item.name);
-    
-        console.log(item.price);
-    
-        toyList.innerHTML += "<p>" + item.name + " " + item.price + "</p>"
+        //console.log(item.price);
+
+        toyList.innerHTML += "<p>" + item.name + " " + item.price + "</p>";
+        
     }
 }
 priceButton.onclick = buttonClick;
