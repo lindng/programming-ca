@@ -9,35 +9,40 @@ if (outOfStock === true) {
 }
 
 
+
 // QUESTION 2 //
 
 for (var i = 15; i <= 25; i++ ) {
+    if (i === 17); {
+        console.log(i);
+    }
 }
+
 
 
 // QUESTION 3 //
 
 var games = [
-	{
-		title: "Grand Theft Auto",
-		rating: 4.48,
-	},
-	{
-		title: "Portal 2",
-		rating: 3.5,
-	},
-	{
-		title: "Team Fortress",
-		rating: undefined,
-	},
-	{
-		title: "The Witcher",
-		rating: 3.0,
-	},
-	{
-		title: "The Elder Scrolls",
-		rating: 2.9,
-	},
+    {
+        title: "Grand Theft Auto",
+        rating: 4.48,
+    },
+    {
+        title: "Portal 2",
+        rating: 3.5,
+    },
+    {
+        title: "Team Fortress",
+        rating: undefined,
+    },
+    {
+        title: "The Witcher",
+        rating: 3.0,
+    },
+    {
+        title: "The Elder Scrolls",
+        rating: 2.9,
+    },
 ];
 
 var gamesContainer = document.querySelector("ul");
@@ -49,6 +54,7 @@ for (var i = 0; i <games.length; i++) {
         gamesContainer.innerHTML += "<li>" + gamesRating + "</li";
     }
 }
+
 
 
 // QUESTION 4 //
@@ -68,19 +74,26 @@ console.log(result);
 
 
 
+
 // QUESTION 5 // 
 
-function convertNumbers(numberOne, numberTwo) {
-    var turnNumberOne = parseInt(numberOne);
-    var turnNumberTwo = parseInt(numberTwo);
-    
-    if (turnNumberOne !== "number" || turnNumberTwo !== "number" ) {
-        return "Invalid argument(s)";
-    }
-    return turnNumberTwo - turnNumberOne;
+function convert (num1, num2) {
+   var convertedNum1 = parseFloat(num1);
+   var convertedNum2 = parseFloat(num2);
+
+   if (isNaN(convertedNum1) || isNaN(convertedNum2)) {
+       return "Invalid argument(s)";
+   }
+
+   return convertedNum2 - convertedNum1;
 }
-var totalSum = convertNumbers (50,3);
-console.log(totalSum);
+
+var element = document.querySelector('#subtraction')
+
+var sum = convert (true, 20);
+
+element.innerHTML = sum;
+
 
 
 
@@ -88,8 +101,9 @@ console.log(totalSum);
 
 var heading = document.querySelector("h1");
 var buttonPage = document.querySelector(".page");
-var a = document.createElement('a');
-a.set
+var newLink = document.getElementById("h1")
+
+
 
 function changeHeading() {
     heading.innerHTML = "Updated heading";
@@ -97,7 +111,6 @@ function changeHeading() {
     body.style.backgroundColor = "yellow";
     heading.style.color = "green";
     heading.style.fontFamily = "impact";
-    heading.innerHTML = 
+    newLink.innerHTML ="new header"
 }
-buttonPage.onclick = changeHeading;
-
+buttonPage.onclick = changeHeading; 
