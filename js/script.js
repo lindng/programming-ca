@@ -101,16 +101,67 @@ element.innerHTML = sum;
 
 var heading = document.querySelector("h1");
 var buttonPage = document.querySelector(".page");
-var newLink = document.getElementById("h1")
-
-
+var remove = document.querySelector("ul");
+var body = document.querySelector("body");
 
 function changeHeading() {
     heading.innerHTML = "Updated heading";
-    var body = document.querySelector("body");
+
+    
     body.style.backgroundColor = "yellow";
+
     heading.style.color = "green";
+
     heading.style.fontFamily = "impact";
-    newLink.innerHTML ="new header"
+
+    heading.innerHTML = heading.innerHTML + "<h1>" + "<a href='#'>" + "Programming Foundation Course Assignment" + "<a>" + "<h1>";
+
+    
+    remove.style.padding = "none";
+    remove.style.listStyleType = "none";
 }
 buttonPage.onclick = changeHeading; 
+
+
+
+// QUESTION 7 //
+
+var toys = [
+	{
+		name: "Lego",
+		price: 15.6,
+	},
+	{
+		name: "Master of the Universe",
+		price: "28.3",
+	},
+	{
+		name: "Barbie",
+		price: null,
+	},
+	{
+		name: "Mr Potato Head",
+		price: 89.99,
+	},
+];
+
+console.log(toys);
+
+var toyList = document.querySelector('#total');
+var priceButton = document.querySelector(".price");
+
+function buttonClick() {
+    for (var i = 0; i < toys.length; i++) {
+
+        var item = toys[i];
+    
+        console.log(item.name);
+    
+        console.log(item.price);
+    
+        toyList.innerHTML += "<p>" + item.name + " " + item.price + "</p>"
+
+        var addition = item.price
+    }
+}
+priceButton.onclick = buttonClick;
