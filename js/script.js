@@ -154,14 +154,7 @@ function buttonClick() {
     for (var i = 0; i < toys.length; i++) {
 
         var item = toys[i];
-        var itemPrice = toys[i].price;
-        
-        //console.log(item.name);
-    
-        //console.log(item.price);
-
         toyList.innerHTML += "<p>" + item.name + " " + item.price + "</p>";
-        
     }
 }
 priceButton.onclick = buttonClick;
