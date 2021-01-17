@@ -160,8 +160,6 @@ function buttonClick() {
         console.log(item.price);
     
         toyList.innerHTML += "<p>" + item.name + " " + item.price + "</p>"
-
-        var addition = item.price
     }
 }
 priceButton.onclick = buttonClick;
